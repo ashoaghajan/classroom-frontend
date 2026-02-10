@@ -62,7 +62,7 @@ export const SubjectsList = () => {
         {
           id: "name",
           accessorKey: "name",
-          size: 200,
+          size: 150,
           header: () => <p className="column-title">Name</p>,
           cell: ({ getValue }) => (
             <span className="text-foreground">{getValue<string>()}</span>
@@ -71,8 +71,8 @@ export const SubjectsList = () => {
         },
         {
           id: "department",
-          accessorKey: "department",
-          size: 150,
+          accessorKey: "department.name",
+          size: 200,
           header: () => <p className="column-title">Department</p>,
           cell: ({ getValue }) => (
             <Badge variant="secondary">{getValue<string>()}</Badge>
