@@ -3,7 +3,7 @@ export type Subject = {
   name: string;
   code: string;
   description: string;
-  department: string;
+  department: Department;
   createdAt?: string;
 };
 
@@ -27,7 +27,7 @@ export type GetOneResponse<T = unknown> = {
 
 declare global {
   interface CloudinaryUploadWidgetResults {
-    event: string;
+    event: "success" | "close" | "abort" | "batch-cancelled";
     info: {
       secure_url: string;
       public_id: string;
